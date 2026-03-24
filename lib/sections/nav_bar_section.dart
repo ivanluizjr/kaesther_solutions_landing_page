@@ -8,12 +8,14 @@ import '../widgets/nav_link.dart';
 
 class NavBarSection extends StatelessWidget {
   final VoidCallback onServicesTap;
+  final VoidCallback onProductsTap;
   final VoidCallback onAboutTap;
   final VoidCallback onContactTap;
 
   const NavBarSection({
     super.key,
     required this.onServicesTap,
+    required this.onProductsTap,
     required this.onAboutTap,
     required this.onContactTap,
   });
@@ -62,6 +64,8 @@ class NavBarSection extends StatelessWidget {
                   children: [
                     NavLink(label: 'Serviços', onTap: onServicesTap),
                     const SizedBox(width: 32),
+                    NavLink(label: 'Nossas Soluções', onTap: onProductsTap),
+                    const SizedBox(width: 32),
                     NavLink(label: 'Sobre', onTap: onAboutTap),
                     const SizedBox(width: 32),
                     NavLink(label: 'Contato', onTap: onContactTap),
@@ -108,6 +112,20 @@ class NavBarSection extends StatelessWidget {
               onTap: () {
                 Navigator.pop(ctx);
                 onServicesTap();
+              },
+            ),
+            ListTile(
+              leading: const Icon(
+                Icons.rocket_launch_rounded,
+                color: AppColors.primary,
+              ),
+              title: const Text(
+                'Nossas Soluções',
+                style: TextStyle(color: Colors.white),
+              ),
+              onTap: () {
+                Navigator.pop(ctx);
+                onProductsTap();
               },
             ),
             ListTile(

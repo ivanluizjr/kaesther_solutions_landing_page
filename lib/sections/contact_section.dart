@@ -35,9 +35,16 @@ class ContactSection extends StatelessWidget {
               ),
               ContactCard(
                 icon: Icons.email_outlined,
-                title: 'E-mail',
-                subtitle: AppUrls.email,
-                onTap: AppUrls.launchEmail,
+                title: 'Comercial',
+                subtitle: AppUrls.emailComercial,
+                onTap: AppUrls.launchEmailComercial,
+                color: AppColors.primary,
+              ),
+              ContactCard(
+                icon: Icons.email_outlined,
+                title: 'Suporte',
+                subtitle: AppUrls.emailSuporte,
+                onTap: AppUrls.launchEmailSuporte,
                 color: AppColors.primary,
               ),
               // ContactCard(

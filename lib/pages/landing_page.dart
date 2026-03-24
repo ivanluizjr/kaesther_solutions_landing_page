@@ -6,6 +6,7 @@ import '../sections/cta_section.dart';
 import '../sections/footer_section.dart';
 import '../sections/hero_section.dart';
 import '../sections/nav_bar_section.dart';
+import '../sections/our_products_section.dart';
 import '../sections/services_section.dart';
 import '../widgets/particles_background.dart';
 
@@ -19,6 +20,7 @@ class LandingPage extends StatefulWidget {
 class _LandingPageState extends State<LandingPage> {
   final ScrollController _scrollController = ScrollController();
   final GlobalKey _servicesKey = GlobalKey();
+  final GlobalKey _productsKey = GlobalKey();
   final GlobalKey _aboutKey = GlobalKey();
   final GlobalKey _contactKey = GlobalKey();
 
@@ -51,6 +53,7 @@ class _LandingPageState extends State<LandingPage> {
               SliverToBoxAdapter(
                 child: NavBarSection(
                   onServicesTap: () => _scrollTo(_servicesKey),
+                  onProductsTap: () => _scrollTo(_productsKey),
                   onAboutTap: () => _scrollTo(_aboutKey),
                   onContactTap: () => _scrollTo(_contactKey),
                 ),
@@ -64,6 +67,12 @@ class _LandingPageState extends State<LandingPage> {
                 child: KeyedSubtree(
                   key: _servicesKey,
                   child: const ServicesSection(),
+                ),
+              ),
+              SliverToBoxAdapter(
+                child: KeyedSubtree(
+                  key: _productsKey,
+                  child: const OurProductsSection(),
                 ),
               ),
               SliverToBoxAdapter(

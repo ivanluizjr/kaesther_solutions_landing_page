@@ -37,7 +37,7 @@ class _ContactCardState extends State<ContactCard> {
         onTap: widget.onTap,
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 300),
-          width: 280,
+          width: 300,
           padding: const EdgeInsets.all(28),
           decoration: BoxDecoration(
             color: _hovering ? AppColors.cardHover : AppColors.cardDefault,

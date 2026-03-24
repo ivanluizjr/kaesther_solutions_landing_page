@@ -63,7 +63,7 @@ class FooterSection extends StatelessWidget {
                 ],
               ),
               Text(
-                '© 2025 Kaesther Solutions. Todos os direitos reservados.',
+                '© 2026 Kaesther Solutions. Todos os direitos reservados.',
                 style: GoogleFonts.inter(
                   fontSize: 13,
                   color: Colors.white.withAlpha(100),

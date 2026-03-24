@@ -45,4 +45,14 @@ abstract class AppColors {
     Color(0xFFE91E63),
     Color(0xFFAD1457),
   ];
+
+  // Product gradients
+  static const List<Color> gradientFoodPricing = [
+    Color(0xFF43A047),
+    Color(0xFF1B5E20),
+  ];
+  static const List<Color> gradientKaestherVeiculos = [
+    Color(0xFF1E88E5),
+    Color(0xFF0D47A1),
+  ];
 }
